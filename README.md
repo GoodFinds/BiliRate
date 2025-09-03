@@ -4,7 +4,7 @@
 
 > 🎯 简洁优雅的B站视频数据分析工具
 
-[![Version](https://img.shields.io/badge/version-1.2-blue.svg)](https://github.com/GoodFinds/BiliRate)
+[![Version](https://img.shields.io/badge/version-1.3-blue.svg)](https://github.com/GoodFinds/BiliRate)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/GoodFinds/BiliRate/blob/main/LICENSE)
 [![Chrome](https://img.shields.io/badge/Chrome-88%2B-green.svg)](https://www.google.com/chrome/)
 [![Stars](https://img.shields.io/github/stars/GoodFinds/BiliRate.svg)](https://github.com/GoodFinds/BiliRate)
