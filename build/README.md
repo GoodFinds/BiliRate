@@ -1,10 +1,10 @@
 <div align="center">
 
-# BiliRate 📊
+# BiliRate <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/bilibili.svg" alt="Bilibili" width="32" height="32" style="vertical-align: middle;">
 
 > 🎯 简洁优雅的B站视频数据分析工具
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/GoodFinds/BiliRate)
+[![Version](https://img.shields.io/badge/version-1.2-blue.svg)](https://github.com/GoodFinds/BiliRate)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/GoodFinds/BiliRate/blob/main/LICENSE)
 [![Chrome](https://img.shields.io/badge/Chrome-88%2B-green.svg)](https://www.google.com/chrome/)
 [![Stars](https://img.shields.io/github/stars/GoodFinds/BiliRate.svg)](https://github.com/GoodFinds/BiliRate)

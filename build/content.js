@@ -329,55 +329,56 @@
         return panel;
     }
 
-    /**
-     * 生成面板HTML内容
-     * @param {object} data - 数据对象
-     * @returns {string} HTML字符串
-     */
     function generatePanelHTML(data) {
         return `
-            <div style="margin-bottom: 8px;">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                    <span>👍 点赞:</span>
-                    <span>${formatNumber(data.likes)}</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                    <span>🪙 投币:</span>
-                    <span>${formatNumber(data.coins)}</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                    <span>⭐ 收藏:</span>
-                    <span>${formatNumber(data.favorites)}</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                    <span>📺 播放:</span>
-                    <span>${formatNumber(data.views)}</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                    <span>💬 评论:</span>
-                    <span>${formatNumber(data.commentsCount)}</span>
-                </div>
-                <div style="border-top: 1px solid #eee; padding-top: 8px;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                        <span>📊 三连率:</span>
-                        <span style="font-weight: bold;">${data.tripleRate}%</span>
+            <div style="margin-bottom: 12px;">
+                <!-- 核心数据区域 -->
+                <div style="background: linear-gradient(135deg, #fff8f8 0%, #fff5f5 100%); padding: 8px; border-radius: 4px; margin-bottom: 8px; border: 1px solid #ffe7e7;">
+                    <div style="text-align: center; margin-bottom: 6px;">
+                        <div style="font-size: 18px; font-weight: bold; color: ${data.color}; margin-bottom: 2px;">
+                            ${data.tripleRate}%
+                        </div>
+                        <div style="font-size: 12px; color: #666;">
+                            📊 三连率
+                        </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                        <span>💭 互动率:</span>
-                        <span>${data.interactionRate}${typeof data.interactionRate === 'string' ? '' : '%'}</span>
+                    <div style="text-align: center; padding: 4px 0; border-top: 1px solid #f0f0f0;">
+                        <span style="font-size: 14px; font-weight: bold; color: ${data.color};">
+                            🏆 ${data.rating}
+                        </span>
                     </div>
-                    <div style="display: flex; justify-content: space-between; font-weight: bold;">
-                        <span>🏆 评级:</span>
-                        <span style="color: ${data.color};">${data.rating}</span>
+                </div>
+                
+                <!-- 详细数据区域 -->
+                <div style="font-size: 12px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 3px; padding: 2px 0;">
+                        <span style="color: #666;">👍 点赞</span>
+                        <span style="font-weight: 500;">${formatNumber(data.likes)}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 3px; padding: 2px 0;">
+                        <span style="color: #666;">🪙 投币</span>
+                        <span style="font-weight: 500;">${formatNumber(data.coins)}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 3px; padding: 2px 0;">
+                        <span style="color: #666;">⭐ 收藏</span>
+                        <span style="font-weight: 500;">${formatNumber(data.favorites)}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 3px; padding: 2px 0; border-bottom: 1px solid #f0f0f0; padding-bottom: 4px;">
+                        <span style="color: #666;">📺 播放</span>
+                        <span style="font-weight: 500;">${formatNumber(data.views)}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 3px; padding: 2px 0;">
+                        <span style="color: #666;">💬 评论</span>
+                        <span style="font-weight: 500;">${formatNumber(data.commentsCount)}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 2px 0;">
+                        <span style="color: #666;">💭 互动率</span>
+                        <span style="font-weight: 500;">${data.interactionRate}${typeof data.interactionRate === 'string' ? '' : '%'}</span>
                     </div>
                 </div>
             </div>
         `;
-    }
-
-    /**
-     * 切换面板显示/隐藏
-     */
+    }     */
     function togglePanel() {
         const panel = document.getElementById(CONFIG.PANEL_ID);
         const content = document.getElementById(CONFIG.CONTENT_ID);
