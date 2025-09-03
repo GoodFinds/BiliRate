@@ -10,7 +10,7 @@
 #### 步骤 1: 下载源码
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/bilibili-triple-rate-calculator.git
+git clone https://github.com/yourusername/BiliRate.git
 
 # 或直接下载ZIP文件
 # 点击GitHub页面的 "Code" -> "Download ZIP"

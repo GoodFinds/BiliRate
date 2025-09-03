@@ -26,7 +26,7 @@
 ### 开发环境设置
 
 1. Fork项目到你的GitHub账号
-2. Clone到本地：`git clone https://github.com/yourusername/bilibili-triple-rate-calculator.git`
+2. Clone到本地：`git clone https://github.com/yourusername/BiliRate.git`
 3. 在Chrome中加载扩展进行测试
 
 ### 提交流程

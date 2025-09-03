@@ -1,11 +1,11 @@
 {
     "manifest_version": 3,
-    "name": "B站三连率计算器",
-    "name__en": "Bilibili Triple Rate Calculator", 
+    "name": "BiliRate - B站数据分析",
+    "name__en": "BiliRate - Bilibili Data Analytics", 
     "version": "1.0.0",
-    "description": "智能计算B站视频的三连率（点赞、投币、收藏），提供数据可视化和评级系统，帮助UP主和观众快速了解视频质量。",
-    "description__en": "Smart calculator for Bilibili video triple rates (like, coin, favorite) with data visualization and rating system.",
-    "homepage_url": "https://github.com/yourusername/bilibili-triple-rate-calculator",
+    "description": "🎯 简洁优雅的B站视频数据分析工具，智能计算三连率并提供可视化评级系统。",
+    "description__en": "🎯 Elegant Bilibili video data analytics tool with smart triple rate calculation and visualization.",
+    "homepage_url": "https://github.com/yourusername/BiliRate",
     "author": "Your Name",
     "icons": {
         "16": "icons/icon16.png",
@@ -21,7 +21,7 @@
             "64": "icons/icon64.png",
             "128": "icons/icon128.png"
         },
-        "default_title": "B站三连率计算器",
+        "default_title": "BiliRate - B站数据分析",
         "default_popup": "popup.html"
     },
     "content_scripts": [
