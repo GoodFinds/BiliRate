@@ -296,7 +296,7 @@
         `;
         
         const title = document.createElement('span');
-        title.textContent = "三连率数据";
+        title.textContent = '三连率数据';
         
         const toggleBtn = document.createElement('button');
         toggleBtn.textContent = '—';
@@ -315,28 +315,7 @@
         `;
         toggleBtn.onclick = togglePanel;
         
-        const helpBtn = document.createElement("button");
-        helpBtn.textContent = "?";
-        helpBtn.style.cssText = `
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 12px;
-            color: #fb7299;
-            padding: 0;
-            width: 16px;
-            height: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 4px;
-            opacity: 0.7;
-        `;
-        helpBtn.onclick = showHelpTooltip;
-        helpBtn.title = "点击查看计算公式";
-
         header.appendChild(title);
-        header.appendChild(helpBtn);
         header.appendChild(toggleBtn);
         
         // 创建内容区域
@@ -400,57 +379,6 @@
             </div>
         `;
     }
-    /**
-     * 显示帮助提示
-     */
-    function showHelpTooltip() {
-        // 移除已存在的提示
-        const existingTooltip = document.getElementById("bili-rate-help-tooltip");
-        if (existingTooltip) {
-            existingTooltip.remove();
-            return;
-        }
-        
-        const tooltip = document.createElement("div");
-        tooltip.id = "bili-rate-help-tooltip";
-        tooltip.style.cssText = `
-            position: fixed;
-            top: 220px;
-            right: 240px;
-            background: rgba(0, 0, 0, 0.9);
-            color: white;
-            padding: 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            line-height: 1.4;
-            z-index: 10001;
-            max-width: 250px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        `;
-        
-        tooltip.innerHTML = `
-            <div style="font-weight: bold; margin-bottom: 8px; color: #fb7299;">📊 计算公式</div>
-            <div style="margin-bottom: 6px;">
-                <strong>三连率</strong> = (点赞 + 投币 + 收藏) ÷ 播放量 × 100%
-            </div>
-            <div style="margin-bottom: 6px;">
-                <strong>互动率</strong> = 评论数 ÷ 播放量 × 100%
-            </div>
-            <div style="font-size: 11px; color: #ccc; margin-top: 8px; border-top: 1px solid #555; padding-top: 6px;">
-                💡 三连率越高说明视频质量越好
-            </div>
-        `;
-        
-        document.body.appendChild(tooltip);
-        
-        // 3秒后自动消失
-        setTimeout(() => {
-            if (tooltip && tooltip.parentNode) {
-                tooltip.remove();
-            }
-        }, 5000);
-    }
-
     function togglePanel() {
         const panel = document.getElementById(CONFIG.PANEL_ID);
         const content = document.getElementById(CONFIG.CONTENT_ID);
