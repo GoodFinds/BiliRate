@@ -1,6 +1,6 @@
 <div align="center">
 
-# BiliRate 📊
+# BiliRate <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/bilibili.svg" alt="Bilibili" width="32" height="32" style="vertical-align: middle;">
 
 > 🎯 简洁优雅的B站视频数据分析工具
 
