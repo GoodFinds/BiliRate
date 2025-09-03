@@ -4,14 +4,14 @@
 
 > 🎯 简洁优雅的B站视频数据分析工具
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/yourusername/BiliRate)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yourusername/BiliRate/blob/main/LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/GoodFinds/BiliRate)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/GoodFinds/BiliRate/blob/main/LICENSE)
 [![Chrome](https://img.shields.io/badge/Chrome-88%2B-green.svg)](https://www.google.com/chrome/)
-[![Stars](https://img.shields.io/github/stars/yourusername/BiliRate.svg)](https://github.com/yourusername/BiliRate)
+[![Stars](https://img.shields.io/github/stars/GoodFinds/BiliRate.svg)](https://github.com/GoodFinds/BiliRate)
 
 一个轻量级的浏览器扩展，智能计算B站视频的三连率（点赞、投币、收藏），提供可视化数据分析和评级系统。
 
-[📦 安装使用](#-安装方式) · [✨ 功能介绍](#-功能特色) · [🐛 问题反馈](https://github.com/yourusername/BiliRate/issues) · [🤝 参与贡献](#-贡献指南)
+[📦 安装使用](#-安装方式) · [✨ 功能介绍](#-功能特色) · [🐛 问题反馈](https://github.com/GoodFinds/BiliRate/issues) · [🤝 参与贡献](#-贡献指南)
 
 </div>
 
@@ -44,7 +44,7 @@
 **第一步：下载源码**
 ```bash
 # 方法1: 使用Git克隆
-git clone https://github.com/yourusername/BiliRate.git
+git clone https://github.com/GoodFinds/BiliRate.git
 
 # 方法2: 直接下载ZIP
 # 点击页面右上角 "Code" -> "Download ZIP"
@@ -156,7 +156,7 @@ git clone https://github.com/yourusername/BiliRate.git
 我们欢迎各种形式的贡献！🎉
 
 ### 🐛 报告问题
-在 [Issues](https://github.com/yourusername/BiliRate/issues) 中报告遇到的问题
+在 [Issues](https://github.com/GoodFinds/BiliRate/issues) 中报告遇到的问题
 
 ### 💡 功能建议  
 提出新功能想法和改进建议
@@ -187,10 +187,10 @@ git clone https://github.com/yourusername/BiliRate.git
 
 <div align="center">
 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/BiliRate?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/BiliRate?style=social)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/BiliRate)
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/BiliRate)
+![GitHub stars](https://img.shields.io/github/stars/GoodFinds/BiliRate?style=social)
+![GitHub forks](https://img.shields.io/github/forks/GoodFinds/BiliRate?style=social)
+![GitHub issues](https://img.shields.io/github/issues/GoodFinds/BiliRate)
+![GitHub last commit](https://img.shields.io/github/last-commit/GoodFinds/BiliRate)
 
 </div>
 
@@ -210,6 +210,6 @@ git clone https://github.com/yourusername/BiliRate.git
 
 **⭐ 如果这个项目对你有帮助，请给个Star支持一下！**
 
-[🌟 Star项目](https://github.com/yourusername/BiliRate) · [🐛 反馈问题](https://github.com/yourusername/BiliRate/issues) · [📖 查看文档](https://github.com/yourusername/BiliRate/blob/main/README.md)
+[🌟 Star项目](https://github.com/GoodFinds/BiliRate) · [🐛 反馈问题](https://github.com/GoodFinds/BiliRate/issues) · [📖 查看文档](https://github.com/GoodFinds/BiliRate/blob/main/README.md)
 
 </div>
