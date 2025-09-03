@@ -1,6 +1,6 @@
 {
   "name": "bilirate",
-  "version": "1.0.0",
+  "version": "1.2",
   "description": "🎯 简洁优雅的B站视频数据分析工具",
   "main": "content.js",
   "scripts": {

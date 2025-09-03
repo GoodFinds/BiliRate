@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BiliRate</title>
+  <style>
+    :root {
+      --primary-color: #fb7299;
+      --text-color: #333;
+      --secondary-text: #666;
+      --light-gray: #f8f8f8;
+      --border-color: #eee;
+      --border-radius: 6px;
+      --success-color: #52c41a;
+      --warning-color: #faad14;
+      --error-color: #ff4d4f;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      width: 350px;
+      padding: 20px;
+      font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+      background: linear-gradient(135deg, #fef7f7 0%, #fff5f5 100%);
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    
+    .logo {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 8px;
+      background: var(--primary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+    }
+    
+    .title {
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    
+    .version {
+      font-size: 12px;
+      color: var(--secondary-text);
+    }
+    
+    .description {
+      font-size: 13px;
+      color: var(--secondary-text);
+      margin-bottom: 16px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    
+    .instructions {
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 12px;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+    
+    .instructions h3 {
+      color: var(--primary-color);
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    
+    .instructions ol {
+      margin-left: 16px;
+    }
+    
+    .instructions li {
+      margin: 4px 0;
+    }
+    
+    .rating-section {
+      margin-bottom: 16px;
+    }
+    
+    .rating-title {
+      color: var(--text-color);
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .rating-title::before {
+      content: "🏆";
+      margin-right: 6px;
+    }
+    
+    .rating-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .rating-table th,
+    .rating-table td {
+      border: 1px solid var(--border-color);
+      padding: 8px 6px;
+      text-align: center;
+    }
+    
+    .rating-table th {
+      background-color: var(--light-gray);
+      font-weight: 600;
+      color: var(--text-color);
+    }
+    
+    .rating-table tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+    
+    .rating-table tr:hover {
+      background-color: #f1f1f1;
+    }
+    
+    .rating-badge {
+      padding: 2px 6px;
+      border-radius: 12px;
+      color: white;
+      font-weight: bold;
+      font-size: 11px;
+    }
+    
+    .features {
+      margin-bottom: 16px;
+    }
+    
+    .features h3 {
+      color: var(--text-color);
+      font-size: 14px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .features h3::before {
+      content: "✨";
+      margin-right: 6px;
+    }
+    
+    .feature-list {
+      list-style: none;
+      font-size: 13px;
+    }
+    
+    .feature-list li {
+      margin: 4px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .feature-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--success-color);
+      font-weight: bold;
+    }
+    
+    .footer {
+      border-top: 1px solid var(--border-color);
+      padding-top: 12px;
+      margin-top: 16px;
+      text-align: center;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    
+    .footer-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+    
+    .copyright {
+      font-size: 12px;
+      color: var(--secondary-text);
+    }
+    
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: var(--border-radius);
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+    
+    .status.active {
+      background-color: #f6ffed;
+      border: 1px solid #b7eb8f;
+      color: var(--success-color);
+    }
+    
+    .status.inactive {
+      background-color: #fff2e8;
+      border: 1px solid #ffbb96;
+      color: var(--warning-color);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        color: #e6e6e6;
+      }
+      
+      .rating-table th {
+        background-color: #3a3a3a;
+        color: #e6e6e6;
+      }
+      
+      .instructions {
+        background-color: #2a2a2a;
+        border-color: #444;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">📊</div>
+    <div class="title">BiliRate</div>
+    <div class="version">v1.0.0</div>
+  </div>
+
+  <div class="description">
+    🎯 简洁优雅的B站视频数据分析工具，智能计算三连率并提供可视化评级系统。
+  </div>
+
+  <div id="status" class="status">
+    <span id="status-icon">⏳</span>
+    <span id="status-text">检查扩展状态...</span>
+  </div>
+
+  <div class="instructions">
+    <h3>📝 使用说明</h3>
+    <ol>
+      <li>打开任意B站视频页面</li>
+      <li>页面右侧会自动显示数据面板</li>
+      <li>点击面板的"-"/"+"按钮可收起/展开</li>
+      <li>数据每3秒自动更新</li>
+    </ol>
+  </div>
+
+  <div class="features">
+    <h3>功能特色</h3>
+    <ul class="feature-list">
+      <li>实时数据展示和自动更新</li>
+      <li>智能评级系统（爆款到较差）</li>
+      <li>优雅的界面设计</li>
+      <li>面板状态记忆功能</li>
+      <li>支持万、亿等中文单位</li>
+      <li>兼容B站页面更新</li>
+    </ul>
+  </div>
+
+  <div class="rating-section">
+    <div class="rating-title">评级标准</div>
+    <table class="rating-table">
+      <thead>
+        <tr>
+          <th>三连率</th>
+          <th>等级</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&gt;30%</td>
+          <td><span class="rating-badge" style="background-color: #FF0000;">爆款</span></td>
+          <td>现象级</td>
+        </tr>
+        <tr>
+          <td>&gt;20%</td>
+          <td><span class="rating-badge" style="background-color: #FF6600;">破圈</span></td>
+          <td>非常优质</td>
+        </tr>
+        <tr>
+          <td>&gt;15%</td>
+          <td><span class="rating-badge" style="background-color: #8A2BE2;">很好</span></td>
+          <td>高质量</td>
+        </tr>
+        <tr>
+          <td>&gt;10%</td>
+          <td><span class="rating-badge" style="background-color: #0099FF;">还不错</span></td>
+          <td>不错</td>
+        </tr>
+        <tr>
+          <td>5-10%</td>
+          <td><span class="rating-badge" style="background-color: #333333;">一般</span></td>
+          <td>普通</td>
+        </tr>
+        <tr>
+          <td>&lt;5%</td>
+          <td><span class="rating-badge" style="background-color: #999999;">较差</span></td>
+          <td>待改进</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://github.com/yourusername/BiliRate" class="footer-link" target="_blank">
+        📂 源码
+      </a>
+      <a href="https://github.com/yourusername/BiliRate/issues" class="footer-link" target="_blank">
+        🐛 反馈
+      </a>
+      <a href="https://github.com/yourusername/BiliRate/blob/main/README.md" class="footer-link" target="_blank">
+        📖 帮助
+      </a>
+    </div>
+    <div class="copyright">
+      MIT License © 2025
+    </div>
+  </div>
+
+  <script>
+    // 检查扩展状态
+    function checkExtensionStatus() {
+      const statusElement = document.getElementById('status');
+      const iconElement = document.getElementById('status-icon');
+      const textElement = document.getElementById('status-text');
+      
+      // 检查是否在B站页面
+      chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+        const currentTab = tabs[0];
+        
+        if (currentTab.url && currentTab.url.includes('bilibili.com/video/')) {
+          statusElement.className = 'status active';
+          iconElement.textContent = '✅';
+          textElement.textContent = '扩展正在运行中';
+        } else if (currentTab.url && currentTab.url.includes('bilibili.com')) {
+          statusElement.className = 'status inactive';
+          iconElement.textContent = '⚠️';
+          textElement.textContent = '请前往B站视频页面';
+        } else {
+          statusElement.className = 'status inactive';
+          iconElement.textContent = 'ℹ️';
+          textElement.textContent = '仅在B站视频页面工作';
+        }
+      });
+    }
+    
+    // 页面加载时检查状态
+    document.addEventListener('DOMContentLoaded', checkExtensionStatus);
+    
+    // 每秒检查一次状态
+    setInterval(checkExtensionStatus, 1000);
+  </script>
+</body>
+</html>
