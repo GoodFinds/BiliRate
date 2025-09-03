@@ -1,0 +1,39 @@
+{
+  "name": "bilibili-triple-rate-calculator",
+  "version": "1.0.0",
+  "description": "智能计算B站视频的三连率，提供数据可视化和评级系统",
+  "main": "content.js",
+  "scripts": {
+    "build": "npm run zip",
+    "zip": "zip -r bilibili-triple-rate-calculator-v1.0.0.zip . -x '*.git*' 'node_modules/*' '*.zip' '*.md' 'package*.json' '.DS_Store'",
+    "dev": "echo '开发模式：请在Chrome扩展页面加载项目文件夹'",
+    "lint": "echo '代码检查功能待添加'",
+    "test": "echo '测试功能待添加'"
+  },
+  "keywords": [
+    "bilibili",
+    "chrome-extension", 
+    "data-analysis",
+    "browser-extension",
+    "triple-rate",
+    "video-analytics",
+    "b站",
+    "三连率",
+    "数据分析"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/bilibili-triple-rate-calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/bilibili-triple-rate-calculator/issues"
+  },
+  "homepage": "https://github.com/yourusername/bilibili-triple-rate-calculator#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
