@@ -378,7 +378,7 @@
                 </div>
             </div>
         `;
-    }     */
+    }
     function togglePanel() {
         const panel = document.getElementById(CONFIG.PANEL_ID);
         const content = document.getElementById(CONFIG.CONTENT_ID);

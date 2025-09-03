@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>生成Bilibili图标</title>
+</head>
+<body>
+    <canvas id="canvas16" width="16" height="16"></canvas>
+    <canvas id="canvas32" width="32" height="32"></canvas>
+    <canvas id="canvas64" width="64" height="64"></canvas>
+    <canvas id="canvas128" width="128" height="128"></canvas>
+    <canvas id="canvas256" width="256" height="256"></canvas>
+
+    <script>
+    function createBilibiliIcon(canvas, size) {
+        const ctx = canvas.getContext('2d');
+        
+        // 清除画布
+        ctx.clearRect(0, 0, size, size);
+        
+        // 设置Bilibili粉色背景
+        ctx.fillStyle = '#fb7299';
+        ctx.fillRect(0, 0, size, size);
+        
+        // 绘制白色的BiliRate文字
+        ctx.fillStyle = '#ffffff';
+        ctx.font = `bold ${Math.floor(size * 0.18)}px Arial`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        
+        // 绘制"BR"标识（BiliRate缩写）
+        ctx.fillText('BR', size/2, size * 0.4);
+        
+        // 绘制数据图标
+        ctx.font = `${Math.floor(size * 0.12)}px Arial`;
+        ctx.fillText('📊', size/2, size * 0.7);
+    }
+
+    // 生成不同尺寸的图标
+    [16, 32, 64, 128, 256].forEach(size => {
+        const canvas = document.getElementById(`canvas${size}`);
+        createBilibiliIcon(canvas, size);
+    });
+
+    console.log('Bilibili图标生成完成！');
+    console.log('请右键点击每个画布保存为PNG格式');
+    </script>
+</body>
+</html>
