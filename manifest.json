@@ -1,12 +1,10 @@
 {
     "manifest_version": 3,
     "name": "BiliRate - B站数据分析",
-    "name__en": "BiliRate - Bilibili Data Analytics", 
     "version": "1.0.0",
     "description": "🎯 简洁优雅的B站视频数据分析工具，智能计算三连率并提供可视化评级系统。",
-    "description__en": "🎯 Elegant Bilibili video data analytics tool with smart triple rate calculation and visualization.",
-    "homepage_url": "https://github.com/yourusername/BiliRate",
-    "author": "Your Name",
+    "homepage_url": "https://github.com/GoodFinds/BiliRate",
+    "author": "GoodFinds",
     "icons": {
         "16": "icons/icon16.png",
         "32": "icons/icon32.png", 
